@@ -1,6 +1,6 @@
 module.exports = {
 
-  title: 'xxl-resume',
+  title: '廖军军的个人博客',
 
   /**
    * @type {boolean} true | false

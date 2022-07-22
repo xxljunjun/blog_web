@@ -78,15 +78,6 @@ module.exports = {
     open: false, // 配置自动启动浏览器  open: 'Google Chrome'-默认启动谷歌
     // 配置多个代理
     proxy: {
-      "/api": {
-        target: "http://autel-cloud-gateway-dev.autel.com",
-        // target: 'http://autel-cloud-gateway-testus.autel.com',
-        ws: true, // 代理的WebSockets
-        changeOrigin: true, // 允许websockets跨域
-        pathRewrite: {
-          "^/api": "",
-        },
-      },
       "/he": {
         target: "https://way.jd.com",
         ws: true, // 代理的WebSockets
