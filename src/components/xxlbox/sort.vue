@@ -1,5 +1,5 @@
 <template>
-  <xxlbox title="分类" imgsrc="file">
+  <xxlbox title="分类" imgsrc="file" width="260px">
     <div class="sort_box">
      <div v-for="item in txtList" :key="item.id" class="item">{{item.txt}}</div>
     </div>
@@ -34,8 +34,9 @@ export default {
   display: flex;
   flex-wrap: wrap;
   padding: 10px;
+  // box-sizing: border-box;
   .item{
-    margin-right: 15px;
+    margin-right: 10px;
     margin-bottom: 15px;
   }
 }

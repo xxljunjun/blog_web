@@ -1,6 +1,6 @@
 <template>
   <div class="box">
-    <div class="top_box">
+    <div class="top_box" :style="`width:${width}`">
       <div class="left_box">
         <img :src="require('@/assets/icons/'+imgsrc+'.png')" alt="xxljunjun" class="menu" />
         {{ title }}
@@ -45,6 +45,10 @@ export default {
       type: String,
       default: "menu",
     },
+    width:{
+      type:String,
+      default:"100%"
+    }
   },
   mounted() {},
   components: {},
@@ -65,7 +69,6 @@ export default {
     justify-content: space-between;
     align-items: center;
     height: 38px;
-    width:260px;
     padding: 0 10px;
     box-sizing: border-box;
     .left_box {

@@ -1,5 +1,5 @@
 <template>
-  <xxlbox title="菜单" imgsrc="menu">
+  <xxlbox title="菜单" imgsrc="menu" width="260px">
     <ul class="tab">
       <li v-for="item in tabBarList" :key="item.id">
         <router-link tag="div" :to="item.path" class="tab_box">
