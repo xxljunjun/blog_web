@@ -1,12 +1,12 @@
 <template>
   <div class="box_left">
     <mine />
-     <mine />
-      <mine />
+    <navigation/>
   </div>
 </template>
 <script>
 import mine from "@/components/mine.vue";
+import navigation from "@/components/xxlbox/navigation.vue";
 export default {
   data() {
     return {};
@@ -14,6 +14,7 @@ export default {
   mounted() {},
   components: {
     mine,
+    navigation
   },
   methods: {},
 };

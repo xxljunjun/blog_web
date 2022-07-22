@@ -1,25 +1,23 @@
 <template>
   <div class="box_left">
-    <mine />
-    <mine />
+    <sort/>
   </div>
 </template>
 <script>
-import mine from "@/components/mine.vue";
+import sort from "@/components/xxlbox/sort.vue";
 export default {
   data() {
     return {};
   },
   mounted() {},
   components: {
-    mine,
+   sort
   },
   methods: {},
 };
 </script>
 <style lang="scss">
 .box_left {
-  padding-bottom:32px ;
   position: sticky;
   top: 0;
   z-index: 9;

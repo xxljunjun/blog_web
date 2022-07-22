@@ -2,18 +2,12 @@
   <div class="app_box">
     <headerTop />
     <div class="body_box">
-     <!-- <div class="box"> -->
-         <bodyLeft />
-      <!-- </div> -->
-     
+      <bodyLeft />
       <div class="box_middle">
         <div class="language"></div>
         <router-view></router-view>
       </div>
-      <!-- <div class="box"> -->
-         <bodyRight />
-      <!-- </div> -->
-     
+      <bodyRight />
     </div>
   </div>
 </template>
