@@ -1,18 +1,26 @@
 <template>
-  <xxlbox title="分类">
-    <p>2222</p>
-    <p>33333</p>
-    <p>111111111</p>
-
-    <p>111111111</p>
-    <p>111111111</p>
+  <xxlbox title="分类" imgsrc="file">
+    <div class="sort_box">
+     <div v-for="item in txtList" :key="item.id" class="item">{{item.txt}}</div>
+    </div>
   </xxlbox>
 </template>
 <script>
 import xxlbox from "@/components/xxlbox/xxlbox.vue";
 export default {
   data() {
-    return {};
+    return {
+      txtList: [
+        { id: 1, txt: "Blog"},
+        { id: 1, txt: "Hexo"},
+        { id: 1, txt: "网络"},
+        { id: 1, txt: "Note"},
+        { id: 1, txt: "SQL"},
+        { id: 1, txt: "Markdown"},
+        { id: 1, txt: "数据结构与算法"},
+        { id: 1, txt: "Plugin"},
+      ],
+    };
   },
   mounted() {},
   components: {
@@ -21,4 +29,14 @@ export default {
   methods: {},
 };
 </script>
-<style lang="scss"></style>
+<style lang="scss" scoped>
+.sort_box{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  .item{
+    margin-right: 15px;
+    margin-bottom: 15px;
+  }
+}
+</style>

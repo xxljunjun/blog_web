@@ -4,7 +4,16 @@
     <div class="body_box">
       <bodyLeft />
       <div class="box_middle">
-        <div class="language"></div>
+        <div class="language">
+          <img src="@/assets/icons/pen.png" alt="" class="pen" />
+          <ul class="lang">
+            <li class="lang_txt">中文</li>
+            <li>|</li>
+            <li class="lang_txt">English</li>
+            <li>|</li>
+            <li class="lang_txt">日本语</li>
+          </ul>
+        </div>
         <router-view></router-view>
       </div>
       <bodyRight />
@@ -34,7 +43,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #eee;
+  background: #666;
   .body_box {
     display: flex;
     width: 80%;
@@ -48,13 +57,30 @@ export default {
     .box_middle {
       width: 100%;
       padding: 0 32px;
-
       .language {
         width: 100%;
         height: 48px;
-        background: red;
+        background: #fff;
         border-radius: 5px;
         margin-bottom: 32px;
+        display: flex;
+        align-items: center;
+        .lang{
+          display: flex;
+          align-items: center;
+         .lang_txt{
+          color: red;
+          cursor: pointer;
+         }
+          li{
+             margin-right: 10px;
+          }
+        }
+        .pen{
+          margin-left: 20px;
+          height: 20px;
+          margin-right: 10px;
+        }
       }
     }
   }

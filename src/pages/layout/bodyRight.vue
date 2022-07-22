@@ -1,5 +1,5 @@
 <template>
-  <div class="box_left">
+  <div class="bodyRight">
     <sort/>
   </div>
 </template>
@@ -16,8 +16,9 @@ export default {
   methods: {},
 };
 </script>
-<style lang="scss">
-.box_left {
+<style lang="scss" scoped>
+.bodyRight {
+  padding-bottom:32px ;
   position: sticky;
   top: 0;
   z-index: 9;

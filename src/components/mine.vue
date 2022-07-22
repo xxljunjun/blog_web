@@ -1,79 +1,134 @@
 <template>
   <div class="mine">
-    <img src="@/assets/logo.png" alt="" class="avatar">
+    <img src="@/assets/avatar.jpg" alt="" class="avatar" />
     <div class="line"></div>
     <ul class="maessage">
-      <li class="myName">junjun</li>
-      <li class="txt">问题, 方法, 程序, 标准, 解决</li>
+      <li class="myName">junjunL</li>
+      <li class="txt">你不解决问题，你就会成为问题</li>
       <li class="numbers">
-        <span>15</span>
-        <span>|</span>
-        <span>18</span>
-        <span>|</span>
-        <span>24</span>
+        <img
+        src="@/assets/icons/document.png"
+        class="document icon"
+        alt="xxljunjun"
+      />
+      
+        <span class="num">15</span>
+        <span class="bar">|</span>
+        <img
+        src="@/assets/icons/file.png"
+        class="file icon"
+         alt="xxljunjun"
+      />
+       
+        <span class="num">18</span>
+         <span class="bar">|</span>
+        <img
+        src="@/assets/icons/label.png"
+        class="label icon"
+         alt="xxljunjun"
+      />
+        <span class="num">24</span>
       </li>
       <li class="connect">
-        <span>1</span>
-        <span>1</span>
-        <span>1</span>
+       <img
+        src="@/assets/icons/github.png"
+        class="github sociation"
+         title="gitHub"
+      />
+        <img
+        src="@/assets/icons/email.png"
+        class="email sociation"
+         title="email"
+      />
+       <img
+        src="@/assets/icons/QQ.png"
+        class="QQ sociation"
+         title="QQ"
+      />
       </li>
     </ul>
   </div>
 </template>
 <script>
-
 export default {
   name: "mine",
   data() {
     return {};
   },
   mounted() {},
-  components: {
-    
-  },
+  components: {},
   methods: {},
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .mine {
- height: 450px;
- width: 260px;
- background: #fff;
- border-radius: 5px;
- display: flex;
- flex-direction: column;
- align-items: center;
- justify-content: flex-start;
-  margin-bottom: 32px;
- .avatar{
-  height: 228px;
-  width: 228px;
- }
- .line{
-  height: 0;
-  width: 100%;
-  border-bottom:#000000 3px dashed;/*#000000表示白色，边框宽度为一个像素，边框线型为虚线*/
-  
- }
- .maessage{
+  height: 460px;
+  width: 260px;
+  background: #fff;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  li{
-    margin: 15px 0;
+  justify-content: flex-start;
+  margin-bottom: 32px;
+  .avatar {
+    height: 228px;
+    width: 228px;
+    margin: 20px 0;
   }
-  .myName{
+  .line {
+    height: 0;
+    width: 100%;
+    border-bottom: #ccc 4px dashed;
+  }
+  .maessage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    li {
+      margin: 15px 0;
+    }
+    .myName {
+      font-weight: 600;
+      font-size: 20px;
+      text-shadow: 18px 18px  #eee;
+    }
+    .txt {
+    }
+    .numbers {
+      margin-top: 0;
+      .icon{
+        height: 20px;
+        margin-right: 5px;
+      }
+      .bar{
+        display: inline-block;
+        margin: 0 5px;
+      }
+      .num{
+        margin-right: 5px;
+      }
+    }
+    .connect {
+       margin-top: 0;
+       display: flex;
+       align-items: center;
+       justify-content: center;
 
-  }
-  .txt{
+       .github{
+        margin-right: 20px;
+       }
+       .email{
+        margin-right: 20px;
+       }
+       .QQ{
 
+       }
+       .sociation{
+        height: 25px;
+        cursor: pointer;
+       }
+    }
   }
-  .numbers{
-
-  }
-  .connect{
-
-  }
- }
 }
 </style>

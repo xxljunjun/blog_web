@@ -1,8 +1,26 @@
 <template>
   <div class="box">
     <div class="top_box">
-      <div class="left_box">{{title}}</div>
-      <div class="right_box" @click="changStatus">+</div>
+      <div class="left_box">
+        <img :src="require('@/assets/icons/'+imgsrc+'.png')" alt="xxljunjun" class="menu" />
+        {{ title }}
+      </div>
+      <div class="right_box" @click="changStatus">
+        <img
+          src="@/assets/icons/reduce.png"
+          alt="xxljunjun"
+          title="收起"
+          class="reduce"
+          v-if="status"
+        />
+        <img
+          src="@/assets/icons/add.png"
+          alt="xxljunjun"
+          title="展开"
+          class="add"
+          v-else
+        />
+      </div>
     </div>
     <div class="content" v-if="status">
       <slot></slot>
@@ -15,13 +33,18 @@ export default {
   data() {
     return {
       status: true,
+      lastUrl:'',
     };
   },
-  props:{
-    title:{
-      type:String,
-      default:''
-    }
+  props: {
+    title: {
+      type: String,
+      default: "",
+    },
+    imgsrc: {
+      type: String,
+      default: "menu",
+    },
   },
   mounted() {},
   components: {},
@@ -32,10 +55,8 @@ export default {
   },
 };
 </script>
-<style lang="scss">
-
+<style lang="scss" scoped>
 .box {
-  width: 260px;
   background: #fff;
   border-radius: 5px;
   margin-bottom: 32px;
@@ -44,9 +65,29 @@ export default {
     justify-content: space-between;
     align-items: center;
     height: 38px;
+    width:260px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    .left_box {
+      .menu {
+        height: 16px;
+        position: relative;
+        top: 3px;
+      }
+    }
+    .right_box {
+      .reduce {
+        height: 16px;
+        cursor: pointer;
+      }
+      .add {
+        height: 16px;
+        cursor: pointer;
+      }
+    }
   }
-  .content{
-    
+  .content {
+   
   }
 }
 </style>

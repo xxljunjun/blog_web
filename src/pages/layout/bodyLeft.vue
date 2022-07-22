@@ -19,7 +19,7 @@ export default {
   methods: {},
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .box_left {
   padding-bottom:32px ;
   position: sticky;
