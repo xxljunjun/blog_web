@@ -23,6 +23,9 @@
             In First
             Out，LIFO）的应用非常广泛，例如网页的前进后退功能，编辑器的后一步前一步功能，方法调用时的函数栈等等。
           </div>
+          <div class="myCode">
+            <showCode />
+          </div>
         </div>
       </div>
       <div class="refer">
@@ -32,25 +35,25 @@
         </div>
       </div>
     </div>
-    <ending/>
-    <buttom/>
+    <ending />
+    <buttom />
   </pageBox>
 </template>
 
 <script>
 import pageBox from "@/components/main/pageBox.vue";
 import ending from "@/components/main/ending.vue";
-
+import showCode from "@/components/main/showCode.vue";
 export default {
   data() {
     return {
-      textArr: [{ id: 1 }],
+      textArr: [{ id: 1 },{ id: 2 },{ id: 3 },{ id: 4 }],
     };
   },
   components: {
     pageBox,
     ending,
-    
+    showCode,
   },
 };
 </script>
@@ -91,13 +94,17 @@ export default {
   .content {
     padding-bottom: 50px;
     #content_1 {
-      .headline {
+      
+    }
+    .headline {
         font-weight: 600;
         font-size: 32px;
         padding-bottom: 20px;
         border-bottom: 3px solid #eee;
         margin-bottom: 20px;
       }
+    .myCode{
+      margin: 20px 0;
     }
   }
   .refer {
@@ -110,9 +117,11 @@ export default {
       }
     }
     .txt {
-            font-size: 16px;
-    word-wrap: break-word;
+      font-size: 16px;
+      word-wrap: break-word;
     }
+    
   }
+  
 }
 </style>

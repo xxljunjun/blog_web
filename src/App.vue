@@ -91,6 +91,11 @@ export default {
 };
 </script>
 <style lang="scss">
+@media screen and (max-width: 1260px) {
+    .bodyRight{
+        display: none;
+    }
+}
 .app_box {
   display: flex;
   flex-direction: column;

@@ -22,7 +22,7 @@ export default {
   data() {
     return {
       words: [], //字母数组push，pop的载体
-      str: "既然我已经踏上这条道路，那么，任何东西都不应妨碍我沿着这条路走下去", //str初始化
+      str: "燕雀安知鸿鹄之志", //str初始化
       letters: [], //str分解后的字母数组
       order: 1, //表示当前是第几句话
     };
