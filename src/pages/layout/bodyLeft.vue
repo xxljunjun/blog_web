@@ -21,6 +21,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .box_left {
+  width: 260px;
   padding-bottom:32px ;
   position: sticky;
   top: 0;

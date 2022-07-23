@@ -36,7 +36,7 @@ export default {
   padding: 10px;
   // box-sizing: border-box;
   .item{
-    margin-right: 10px;
+    padding-right: 10px;
     margin-bottom: 15px;
   }
 }

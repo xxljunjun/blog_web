@@ -18,6 +18,7 @@
       </div>
       <bodyRight />
     </div>
+    <backTop/>
   </div>
 </template>
 <script>
@@ -32,6 +33,7 @@
 import headerTop from "@/pages/layout/headerTop.vue";
 import bodyLeft from "@/pages/layout/bodyLeft.vue";
 import bodyRight from "@/pages/layout/bodyRight.vue";
+import backTop from "@/components/main/backTop.vue"
 export default {
   name: "App",
   data() {
@@ -42,9 +44,10 @@ export default {
     window.L2Dwidget.init({
       model: {
         jsonPath:
+        //  "https://unpkg.com/live2d-widget-model-chitose@1.0.5/assets/chitose.model.json",
           // "https://unpkg.com/live2d-widget-model-shizuku@1.0.5/assets/shizuku.model.json",
-
-          "https://unpkg.com/live2d-widget-model-koharu/assets/koharu.model.json",
+         'https://unpkg.com/live2d-widget-model-haruto@1.0.5/assets/haruto.model.json',
+          // "https://unpkg.com/live2d-widget-model-koharu/assets/koharu.model.json",
         // "https://unpkg.com/live2d-widget-model-ni-j/assets/ni-j.model.json",
         scale: 1,
       },
@@ -52,7 +55,7 @@ export default {
         position: "right",
         width: 180,
         height: 300,
-        hOffset: 100,
+        hOffset: 70,
         vOffset: -20,
       },
       mobile: {
@@ -82,6 +85,7 @@ export default {
     headerTop,
     bodyLeft,
     bodyRight,
+    backTop
   },
   methods: {},
 };
@@ -92,19 +96,19 @@ export default {
   flex-direction: column;
   align-items: center;
   background: #666;
+  padding: 0 40px;
   .body_box {
     display: flex;
-    width: 80%;
     align-items: flex-start;
     justify-content: space-between;
     padding: 32px 32px 0;
     margin-top: 64px;
     box-sizing: border-box;
-    max-width: 1440px;
-    overflow: visible;
+    width: 100%;
     .box_middle {
-      width: 100%;
       padding: 0 32px;
+      max-width: 1440px;
+          width: 100%;
       .language {
         width: 100%;
         height: 48px;
