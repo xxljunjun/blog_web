@@ -5,7 +5,7 @@
         <p class="word">
           <typingEffect/>
         </p>
-        <div class="myName">--xxl--</div>
+        <div class="myName">--junjunL--</div>
       </div>
     </xxlbox>
     <xxlbox title="近期文章" imgsrc="record">
@@ -13,9 +13,9 @@
         <div v-for="item in tableList" :key="item.id" class="txt_box" @click="goToDetail">
           <h3 class="titile">数据结构之栈 Stack 和队列 Queue</h3>
           <p class="txt_content">
-            <img src="@/assets/icons/file.png" class="icon" />
+            <img src="@/assets/icons/time_2.png" class="icon" />
             <span>2020-04-23</span>
-            <img src="@/assets/icons/file.png" class="icon" />
+            <img src="@/assets/icons/time_3.png" class="icon" />
             <span>2020-05-28</span>
             <img src="@/assets/icons/file.png" class="icon" />
             <span class="mylabel">数据结构与算法</span>
@@ -25,9 +25,11 @@
         <div class="more">更多文章</div>
       </div>
     </xxlbox>
+    <buttom/>
   </div>
 </template>
 <script>
+import buttom from "@/components/xxlbox/buttom.vue"
 import xxlbox from "@/components/xxlbox/xxlbox.vue";
 import typingEffect from "@/components/main/typingEffect.vue";
 export default {
@@ -48,7 +50,8 @@ export default {
   },
   components: {
     xxlbox,
-    typingEffect
+    typingEffect,
+    buttom
   },
   methods:{
     goToDetail(){

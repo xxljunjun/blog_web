@@ -22,7 +22,7 @@ export default {
   data() {
     return {
       words: [], //字母数组push，pop的载体
-      str: "By Punk", //str初始化
+      str: "既然我已经踏上这条道路，那么，任何东西都不应妨碍我沿着这条路走下去", //str初始化
       letters: [], //str分解后的字母数组
       order: 1, //表示当前是第几句话
     };
@@ -31,13 +31,13 @@ export default {
     //监听order值的变化，改变str的内容
     order(old, newV) {
       if (this.order % 4 == 1) {
-        this.str = "By Punk!";
+        this.str = "燕雀安知鸿鹄之志";
       } else if (this.order % 4 == 2) {
-        this.str = "looking for a job. ";
+        this.str = "路漫漫其修远兮，吾将上下而求索";
       } else if (this.order % 4 == 3) {
-        this.str = "a front-end programmer.";
+        this.str = "社会犹如一条船，每个人都要有掌舵的准备";
       } else {
-        this.str = "coding the web...";
+        this.str = "利用时间是一个极其高级的规律";
       }
     },
   },
@@ -70,7 +70,7 @@ export default {
         if (i == L - 1) {
           setTimeout(function () {
             that.back();
-          }, 2000);
+          }, 6000);
         }
       };
     },

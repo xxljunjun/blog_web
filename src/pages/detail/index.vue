@@ -1,20 +1,22 @@
 <template>
-    <div class="detail">
-        <pageBox title="页面内容" imgsrc="record">
-            11111111111111111
-        </pageBox>
-    </div>
+  <div class="detail_box">
+    <detail />
+ <buttom/>
+  </div>
 </template>
 
 <script>
-import pageBox from "@/components/main/pageBox.vue"
-    export default {
-        components:{
-            pageBox
-        }
-    }
+import buttom from "@/components/xxlbox/buttom.vue"
+import detail from "@/components/detail/index.vue";
+export default {
+  components: {
+    detail,
+    buttom
+  },
+};
 </script>
 
 <style lang="scss" scoped>
-
+.detail_box {
+}
 </style>

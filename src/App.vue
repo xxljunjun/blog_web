@@ -4,7 +4,7 @@
     <div class="body_box">
       <bodyLeft />
       <div class="box_middle">
-        <div class="language">
+        <!-- <div class="language">
           <img src="@/assets/icons/pen.png" alt="" class="pen" />
           <ul class="lang">
             <li class="lang_txt">中文</li>
@@ -13,7 +13,7 @@
             <li>|</li>
             <li class="lang_txt">日本语</li>
           </ul>
-        </div>
+        </div> -->
         <router-view></router-view>
       </div>
       <bodyRight />
@@ -96,19 +96,21 @@ export default {
   flex-direction: column;
   align-items: center;
   background: #666;
-  padding: 0 40px;
+      height: inherit;
   .body_box {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 32px 32px 0;
+    padding: 32px 80px 0;
     margin-top: 64px;
     box-sizing: border-box;
     width: 100%;
+    background: #666;
+    height: auto;
     .box_middle {
       padding: 0 32px;
       max-width: 1440px;
-          width: 100%;
+      width: 100%;
       .language {
         width: 100%;
         height: 48px;

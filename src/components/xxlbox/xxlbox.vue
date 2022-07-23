@@ -1,6 +1,6 @@
 <template>
   <div class="box">
-    <div class="top_box" :style="`width:${width}`">
+    <div class="top_box" :style="`width:${width}`" v-if='hasTop'>
       <div class="left_box">
         <img :src="require('@/assets/icons/'+imgsrc+'.png')" alt="xxljunjun" class="menu" />
         {{ title }}
@@ -47,6 +47,10 @@ export default {
     width:{
       type:String,
       default:"100%"
+    },
+     hasTop:{
+      type:Boolean,
+      default:true
     }
   },
   mounted() {},

@@ -1,7 +1,7 @@
 <template>
   <xxlbox title="分类" imgsrc="file" width="260px">
     <div class="sort_box">
-     <div v-for="item in txtList" :key="item.id" class="item">{{item.txt}}</div>
+     <div v-for="item in txtList" :key="item.id" class="item" :class="`activity_${item.myCn}`">{{item.txt}}</div>
     </div>
   </xxlbox>
 </template>
@@ -11,14 +11,14 @@ export default {
   data() {
     return {
       txtList: [
-        { id: 1, txt: "Blog"},
-        { id: 1, txt: "Hexo"},
-        { id: 1, txt: "网络"},
-        { id: 1, txt: "Note"},
-        { id: 1, txt: "SQL"},
-        { id: 1, txt: "Markdown"},
-        { id: 1, txt: "数据结构与算法"},
-        { id: 1, txt: "Plugin"},
+        { id: 1, txt: "Blog",myCn:1},
+        { id: 1, txt: "Hexo",myCn:3},
+        { id: 1, txt: "网络",myCn:2},
+        { id: 1, txt: "Note",myCn:2},
+        { id: 1, txt: "SQL",myCn:1},
+        { id: 1, txt: "Markdown",myCn:3},
+        { id: 1, txt: "数据结构与算法",myCn:1},
+        { id: 1, txt: "Plugin",myCn:2},
       ],
     };
   },
@@ -30,6 +30,18 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.activity_1{
+  font-size: 14px;
+  color: #666;
+}
+.activity_2{
+  font-size: 16px;
+  color: #d1d1d1;
+}
+.activity_3{
+  font-size: 18px;
+  color: #000;
+}
 .sort_box{
   display: flex;
   flex-wrap: wrap;
@@ -38,6 +50,10 @@ export default {
   .item{
     padding-right: 10px;
     margin-bottom: 15px;
+    cursor: pointer;
+    &:hover{
+      text-decoration: underline;
+    }
   }
 }
 </style>
