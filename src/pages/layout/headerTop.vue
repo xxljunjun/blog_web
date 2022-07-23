@@ -5,7 +5,7 @@
     </div>
     <div class="header_middle">
       {{ "军军 の" }}
-      <span class="blue_box">博客园</span>
+      <span class="blue_box">博客</span>
     </div>
     <div class="header_right">
       <img
