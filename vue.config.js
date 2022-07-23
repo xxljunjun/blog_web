@@ -75,6 +75,10 @@ module.exports = {
     port: 8088, // 端口号
     hot: true, //启用本地node服务中的socket长连接来实时通信
     https: false, // https:{type:Boolean}
+    overlay: {
+      warnings: false,
+      errors: true
+    },
     open: false, // 配置自动启动浏览器  open: 'Google Chrome'-默认启动谷歌
     // 配置多个代理
     proxy: {

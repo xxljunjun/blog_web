@@ -7,44 +7,43 @@
       <li class="txt">你不解决问题，你就会成为问题</li>
       <li class="numbers">
         <img
-        src="@/assets/icons/document.png"
-        class="document icon"
-        alt="xxljunjun"
-      />
-      
+          src="@/assets/icons/document.png"
+          class="document icon"
+          alt="xxljunjun"
+        />
+
         <span class="num">15</span>
         <span class="bar">|</span>
-        <img
-        src="@/assets/icons/file.png"
-        class="file icon"
-         alt="xxljunjun"
-      />
-       
+        <img src="@/assets/icons/file.png" class="file icon" alt="xxljunjun" />
+
         <span class="num">18</span>
-         <span class="bar">|</span>
+        <span class="bar">|</span>
         <img
-        src="@/assets/icons/label.png"
-        class="label icon"
-         alt="xxljunjun"
-      />
+          src="@/assets/icons/label.png"
+          class="label icon"
+          alt="xxljunjun"
+        />
         <span class="num">24</span>
       </li>
       <li class="connect">
-       <img
-        src="@/assets/icons/github.png"
-        class="github sociation"
-         title="gitHub"
-      />
         <img
-        src="@/assets/icons/email.png"
-        class="email sociation"
-         title="email"
-      />
-       <img
-        src="@/assets/icons/QQ.png"
-        class="QQ sociation"
-         title="QQ"
-      />
+          src="@/assets/icons/github.png"
+          class="github sociation"
+          title="gitHub"
+          @click="goToPage(1)"
+        />
+        <img
+          src="@/assets/icons/email.png"
+          class="email sociation"
+          title="email"
+          @click="goToPage(2)"
+        />
+        <img
+          src="@/assets/icons/QQ.png"
+          class="QQ sociation"
+          title="QQ"
+          @click="goToPage(3)"
+        />
       </li>
     </ul>
   </div>
@@ -57,7 +56,19 @@ export default {
   },
   mounted() {},
   components: {},
-  methods: {},
+  methods: {
+    goToPage(val) {
+      switch (val) {
+        case 1:
+          window.open('https://github.com/xxljunjun')
+          break;
+        case 2:
+          break;
+        case 3:
+          break;
+      }
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>
@@ -91,43 +102,42 @@ export default {
     .myName {
       font-weight: 600;
       font-size: 20px;
-      text-shadow: 18px 18px  #eee;
+      text-shadow: 18px 18px #eee;
     }
     .txt {
     }
     .numbers {
       margin-top: 0;
-      .icon{
+      .icon {
         height: 20px;
         margin-right: 5px;
       }
-      .bar{
+      .bar {
         display: inline-block;
         margin: 0 5px;
       }
-      .num{
+      .num {
         margin-right: 5px;
       }
     }
     .connect {
-       margin-top: 0;
-       display: flex;
-       align-items: center;
-       justify-content: center;
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-       .github{
+      .github {
         margin-right: 20px;
-       }
-       .email{
+      }
+      .email {
         margin-right: 20px;
-       }
-       .QQ{
-
-       }
-       .sociation{
+      }
+      .QQ {
+      }
+      .sociation {
         height: 25px;
         cursor: pointer;
-       }
+      }
     }
   }
 }

@@ -3,6 +3,7 @@
 //路由懒加载
 const home = () => import('@/pages/home/index.vue')
 const about = () =>import('@/pages/about/index.vue')
+const detail = () =>import('@/pages/detail/index.vue')
 
 /* 1.export与export default均可用于导出常量、函数、文件、模块等
 
@@ -20,6 +21,8 @@ const about = () =>import('@/pages/about/index.vue')
 const routes = [
     { path: '/', component: home },
     { path: '/home', component: home },
+    { path: '/detail', component: detail },
     { path: '/about', component: about },
+    
 ]
 export default routes

@@ -33,7 +33,6 @@ export default {
   data() {
     return {
       status: true,
-      lastUrl:'',
     };
   },
   props: {

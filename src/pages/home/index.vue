@@ -2,13 +2,15 @@
   <div class="homeIndex">
     <xxlbox title="礼仪" imgsrc="heart">
       <div class="word_box">
-        <p class="word">管他是不是人面兽心，我们只要活着就行。</p>
-        <div class="myName">--太宰治--</div>
+        <p class="word">
+          <typingEffect/>
+        </p>
+        <div class="myName">--xxl--</div>
       </div>
     </xxlbox>
     <xxlbox title="近期文章" imgsrc="record">
       <div class="home">
-        <div v-for="item in tableList" :key="item.id" class="txt_box">
+        <div v-for="item in tableList" :key="item.id" class="txt_box" @click="goToDetail">
           <h3 class="titile">数据结构之栈 Stack 和队列 Queue</h3>
           <p class="txt_content">
             <img src="@/assets/icons/file.png" class="icon" />
@@ -27,6 +29,7 @@
 </template>
 <script>
 import xxlbox from "@/components/xxlbox/xxlbox.vue";
+import typingEffect from "@/components/main/typingEffect.vue";
 export default {
   data() {
     return {
@@ -45,7 +48,13 @@ export default {
   },
   components: {
     xxlbox,
+    typingEffect
   },
+  methods:{
+    goToDetail(){
+      this.$router.push('/detail')
+    }
+  }
 };
 </script>
 <style lang="scss" scoped>
