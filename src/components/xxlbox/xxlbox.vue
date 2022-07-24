@@ -61,6 +61,7 @@ export default {
 <style lang="scss" scoped>
 @media screen and (max-width: 800px) {
   .box {
+    margin-bottom: 15px !important;
     .top_box{
       min-height: 20px;
       line-height: 20px;
