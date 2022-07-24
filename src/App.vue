@@ -18,7 +18,7 @@
       </div>
       <bodyRight />
     </div>
-    <backTop/>
+    <backTop />
   </div>
 </template>
 <script>
@@ -33,7 +33,7 @@
 import headerTop from "@/pages/layout/headerTop.vue";
 import bodyLeft from "@/pages/layout/bodyLeft.vue";
 import bodyRight from "@/pages/layout/bodyRight.vue";
-import backTop from "@/components/main/backTop.vue"
+import backTop from "@/components/main/backTop.vue";
 export default {
   name: "App",
   data() {
@@ -44,10 +44,10 @@ export default {
     window.L2Dwidget.init({
       model: {
         jsonPath:
-        //  "https://unpkg.com/live2d-widget-model-chitose@1.0.5/assets/chitose.model.json",
+          //  "https://unpkg.com/live2d-widget-model-chitose@1.0.5/assets/chitose.model.json",
           // "https://unpkg.com/live2d-widget-model-shizuku@1.0.5/assets/shizuku.model.json",
-         'https://unpkg.com/live2d-widget-model-haruto@1.0.5/assets/haruto.model.json',
-          // "https://unpkg.com/live2d-widget-model-koharu/assets/koharu.model.json",
+          "https://unpkg.com/live2d-widget-model-haruto@1.0.5/assets/haruto.model.json",
+        // "https://unpkg.com/live2d-widget-model-koharu/assets/koharu.model.json",
         // "https://unpkg.com/live2d-widget-model-ni-j/assets/ni-j.model.json",
         scale: 1,
       },
@@ -85,23 +85,81 @@ export default {
     headerTop,
     bodyLeft,
     bodyRight,
-    backTop
+    backTop,
   },
   methods: {},
 };
 </script>
 <style lang="scss">
-@media screen and (max-width: 1260px) {
-    .bodyRight{
-        display: none;
-    }
+// 1000<x<1260
+@media screen and (min-width: 1000px) and (max-width: 1260px) {
+  // .bodyRight {
+  //   display: none !important;
+  // }
 }
+@media screen and (max-width: 1260px) {
+  .bodyLeft {
+    .mine {
+      flex-flow: row !important ;
+      width: 100%;
+      height: 130px;
+      .avatar {
+        height: 110px;
+        width: 110px;
+        margin-left: 20px;
+        padding-right: 20px;
+        border-right: #ccc 4px dashed;
+      }
+      .line {
+        display: none;
+      }
+      // .connect{
+      //   display: none !important;
+      // }
+      .maessage {
+        margin-left: 20px;
+      }
+      .numbers {
+        display: none !important;
+      }
+    }
+  }
+  // #live2d-widget{
+  //   display: none !important;
+  // }
+  // .backTop{
+  //    display: none !important;
+  // }
+  .body_box {
+    flex-flow: column !important ;
+  }
+  .bodyLeft {
+    position: relative !important;
+    width: 100% !important;
+    order: 1 !important; /*排序为第3个子元素*/
+    padding: 0 !important;
+  }
+  .bodyRight {
+    position: relative;
+    width: 100% !important;
+    order: 1 !important;
+    padding: 0 !important;
+  }
+  .box_middle {
+    padding: 0 !important;
+    order: 2 !important;
+  }
+  .top_box {
+    width: 100% !important;
+  }
+}
+//基础样式
 .app_box {
   display: flex;
   flex-direction: column;
   align-items: center;
   background: #666;
-      height: inherit;
+  height: inherit;
   .body_box {
     display: flex;
     align-items: flex-start;

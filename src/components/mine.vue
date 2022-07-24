@@ -86,6 +86,7 @@ export default {
     height: 228px;
     width: 228px;
     margin: 20px 0;
+    border-radius: 5px;
   }
   .line {
     height: 0;

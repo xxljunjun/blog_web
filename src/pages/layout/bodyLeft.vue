@@ -1,5 +1,5 @@
 <template>
-  <div class="box_left">
+  <div class="bodyLeft">
     <mine />
     <navigation/>
   </div>
@@ -20,7 +20,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.box_left {
+.bodyLeft {
   width: 260px;
   padding-bottom:32px ;
   position: sticky;

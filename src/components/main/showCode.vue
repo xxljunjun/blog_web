@@ -7,6 +7,12 @@
   ></prism-editor>
 </template>
 <script>
+/*
+ode----为需要高亮显示的代码内容
+highlighter----定义在methods中的一个方法，用于把code高亮显示
+lineNumbers----是否显示行号
+readonly----是否
+*/
 import { PrismEditor } from "vue-prism-editor";
 import "vue-prism-editor/dist/prismeditor.min.css"; // import the styles somewhere
 

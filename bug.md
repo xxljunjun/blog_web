@@ -8,11 +8,11 @@ vue-prism-editor
 prismjs
 ```
 ### 自适应
++ 手机端、pc端共用一个项目还是建议使用栅格布局、媒体查询控制。
 ```
 或者<=1260px
 1000px
-
-
 ```
++npm i postcss-px-to-viewport -S
 
 ### 实现打字效果
