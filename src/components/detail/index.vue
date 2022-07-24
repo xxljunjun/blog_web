@@ -36,7 +36,6 @@
       </div>
     </div>
     <ending />
-    <buttom />
   </pageBox>
 </template>
 
@@ -59,11 +58,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@media screen and (max-width: 800px) {
+  .txt_content{
+    .icon {
+      height: 10px !important;
+      margin-right: 4px !important;
+    }
+  }
+}
 .detail {
   padding: 0 32px;
   .title {
     font-size: 40px;
-    // font-weight: 600;
+    font-weight: 600;
     text-align: center;
     padding-bottom: 20px;
     border-bottom: 3px solid #eee;

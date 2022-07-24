@@ -28,6 +28,38 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+@media screen and (max-width: 800px) {
+ .header_box {
+  min-height: 40px;
+  padding: 0 10px;
+  .header_left {
+     min-height: 40px;
+    min-width: 40px;
+    .home {
+      min-height: 15px;
+    }
+  }
+  .header_middle {
+   
+    .blue_box {
+      min-height: 20px;
+       min-width: 40px;
+      border-radius: 3px !important;
+      line-height: 20px !important;
+      margin-left: 5px !important;
+    }
+  }
+  .header_right {
+    min-height: 40px;
+    min-width: 40px;
+    .search {
+      min-height: 15px;
+      //
+    }
+  }
+}
+ 
+}
 .header_box {
   display: flex;
   align-items: center;

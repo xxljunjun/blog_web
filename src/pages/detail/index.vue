@@ -1,17 +1,17 @@
 <template>
   <div class="detail_box">
     <detail />
- <buttom/>
+ <mybuttom/>
   </div>
 </template>
 
 <script>
-import buttom from "@/components/xxlbox/buttom.vue"
+import mybuttom from "@/components/xxlbox/mybuttom.vue"
 import detail from "@/components/detail/index.vue";
 export default {
   components: {
     detail,
-    buttom
+    mybuttom
   },
 };
 </script>

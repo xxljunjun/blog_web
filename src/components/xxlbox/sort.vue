@@ -1,5 +1,5 @@
 <template>
-  <xxlbox title="分类" imgsrc="file" width="260px">
+  <xxlbox title="分类" imgsrc="file">
     <div class="sort_box">
      <div v-for="item in txtList" :key="item.id" class="item" :class="`activity_${item.myCn}`">{{item.txt}}</div>
     </div>
@@ -12,13 +12,13 @@ export default {
     return {
       txtList: [
         { id: 1, txt: "Blog",myCn:1},
-        { id: 1, txt: "Hexo",myCn:3},
-        { id: 1, txt: "网络",myCn:2},
-        { id: 1, txt: "Note",myCn:2},
-        { id: 1, txt: "SQL",myCn:1},
-        { id: 1, txt: "Markdown",myCn:3},
-        { id: 1, txt: "数据结构与算法",myCn:1},
-        { id: 1, txt: "Plugin",myCn:2},
+        { id: 2, txt: "Hexo",myCn:3},
+        { id: 3, txt: "网络",myCn:2},
+        { id: 4, txt: "Note",myCn:2},
+        { id: 5, txt: "SQL",myCn:1},
+        { id: 6, txt: "Markdown",myCn:3},
+        { id: 7, txt: "数据结构与算法",myCn:1},
+        { id: 8, txt: "Plugin",myCn:2},
       ],
     };
   },

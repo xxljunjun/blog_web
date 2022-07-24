@@ -42,6 +42,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@media screen and (max-width: 800px) {
+  .top_box {
+    height: 20px !important;
+    padding: 0 4px !important;
+    .left_box {
+      .menu {
+        height: 10px !important;
+        margin-right: 4px !important;
+      }
+    }
+}
+}
 .pageBox {
   background: #fff;
   border-radius: 5px;
@@ -54,10 +66,11 @@ export default {
     padding: 0 10px;
     box-sizing: border-box;
     .left_box {
+       display: flex;
+    justify-content: center;
+    align-items: center;
       .menu {
         height: 16px;
-        position: relative;
-        top: 3px;
       }
     }
     .right_box {

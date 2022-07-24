@@ -3,14 +3,19 @@
     <xxlbox title="礼仪" imgsrc="heart">
       <div class="word_box">
         <p class="word">
-          <typingEffect/>
+          <typingEffect />
         </p>
         <div class="myName">--junjunL--</div>
       </div>
     </xxlbox>
     <xxlbox title="近期文章" imgsrc="record">
       <div class="home">
-        <div v-for="item in tableList" :key="item.id" class="txt_box" @click="goToDetail">
+        <div
+          v-for="item in tableList"
+          :key="item.id"
+          class="txt_box"
+          @click="goToDetail"
+        >
           <h3 class="titile">数据结构之栈 Stack 和队列 Queue</h3>
           <p class="txt_content">
             <img src="@/assets/icons/time_2.png" class="icon" />
@@ -25,11 +30,11 @@
         <div class="more">更多文章</div>
       </div>
     </xxlbox>
-    <buttom/>
+    <mybuttom />
   </div>
 </template>
 <script>
-import buttom from "@/components/xxlbox/buttom.vue"
+import mybuttom from "@/components/xxlbox/mybuttom.vue";
 import xxlbox from "@/components/xxlbox/xxlbox.vue";
 import typingEffect from "@/components/main/typingEffect.vue";
 export default {
@@ -51,23 +56,51 @@ export default {
   components: {
     xxlbox,
     typingEffect,
-    buttom
+    mybuttom,
   },
-  methods:{
-    goToDetail(){
-      this.$router.push('/detail')
-    }
-  }
+  methods: {
+    goToDetail() {
+      this.$router.push("/detail");
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>
+@media screen and (max-width: 800px) {
+  .home {
+    .txt_box {
+     min-height: 60px !important  ;
+      .titile {
+        
+      }
+      .txt_content {
+       
+        .icon {
+         height: 10px !important;
+      margin-right: 4px !important;
+        }
+        span {
+          
+        }
+        .mylabel {
+          
+        }
+      }
+      .txt {
+      }
+    }
+    .more {
+      min-height: 20px;
+    }
+  }
+}
 .homeIndex {
   .word_box {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+    padding-bottom: 40px;
     margin: 20px 0 0;
     height: 150px;
     .word {
@@ -88,17 +121,18 @@ export default {
         bottom: -20px;
       }
     }
-    .myName{
+    .myName {
       margin-top: 50px;
     }
   }
 }
 .home {
   .txt_box {
-    height: 180px;
+    min-height: 180px;
     background: #fff;
     padding: 32px;
     box-sizing: border-box;
+    border-bottom: 1px solid #ccc;
     &:hover {
       background: #eee;
       cursor: pointer;

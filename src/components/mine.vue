@@ -72,9 +72,36 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+@media screen and (max-width: 800px) {
+    .mine {
+      flex-flow: row !important ;
+      height: 80px !important;
+      margin-bottom: 15px !important;
+      .avatar {
+        height: 60px !important;
+        width: 60px !important;
+        margin-left: 5px !important;
+        padding-right: 10px !important;
+        border-right: #ccc 2px dashed !important;
+      }
+      .line {
+        display: none !important;
+      }
+      .maessage {
+        margin-left: 20px !important;
+      }
+      .numbers {
+        display: none !important;
+      }
+      .connect {
+      .sociation {
+        height: 12px !important;
+      }
+    }
+    }
+}
 .mine {
-  height: 460px;
-  width: 260px;
+  width: 100%;
   background: #fff;
   border-radius: 5px;
   display: flex;
@@ -82,6 +109,8 @@ export default {
   align-items: center;
   justify-content: flex-start;
   margin-bottom: 32px;
+  padding: 0 20px 20px;
+  box-sizing: border-box;
   .avatar {
     height: 228px;
     width: 228px;
@@ -97,18 +126,18 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    li {
-      margin: 15px 0;
-    }
     .myName {
       font-weight: 600;
       font-size: 20px;
       text-shadow: 18px 18px #eee;
+      margin-bottom: 15px;
     }
     .txt {
+       margin-bottom: 15px;
     }
     .numbers {
       margin-top: 0;
+       margin-bottom: 15px;
       .icon {
         height: 20px;
         margin-right: 5px;

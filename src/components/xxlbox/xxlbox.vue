@@ -1,6 +1,6 @@
 <template>
   <div class="box">
-    <div class="top_box" :style="`width:${width}`" v-if='hasTop'>
+    <div class="top_box"v-if='hasTop'>
       <div class="left_box">
         <img :src="require('@/assets/icons/'+imgsrc+'.png')" alt="xxljunjun" class="menu" />
         {{ title }}
@@ -44,10 +44,6 @@ export default {
       type: String,
       default: "menu",
     },
-    width:{
-      type:String,
-      default:"100%"
-    },
      hasTop:{
       type:Boolean,
       default:true
@@ -63,6 +59,30 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+@media screen and (max-width: 800px) {
+  .box {
+    .top_box{
+      min-height: 20px;
+      line-height: 20px;
+       padding: 0 4px !important;
+    .left_box {
+      .menu {
+        height: 10px !important;
+        margin-right: 4px !important;
+      }
+    }
+    .right_box {
+      height: 20px !important;
+      .reduce {
+         height: 8px !important;
+      }
+      .add {
+         height: 8px !important;
+      }
+    }
+    }
+  }
+}
 .box {
   background: #fff;
   border-radius: 5px;
@@ -75,13 +95,18 @@ export default {
     padding: 0 10px;
     box-sizing: border-box;
     .left_box {
+      display: flex;
+    justify-content: center;
+    align-items: center;
       .menu {
         height: 16px;
-        position: relative;
-        top: 3px;
+        margin-right: 5px;
       }
     }
     .right_box {
+       display: flex;
+    justify-content: center;
+    align-items: center;
       .reduce {
         height: 16px;
         cursor: pointer;

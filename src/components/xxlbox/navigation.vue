@@ -1,5 +1,5 @@
 <template>
-  <xxlbox title="菜单" imgsrc="menu" width="260px">
+  <xxlbox title="菜单" imgsrc="menu">
     <ul class="tab">
       <li
         v-for="item in tabBarList"
@@ -7,8 +7,12 @@
         :class="{ bgm: item.isChoose }"
       >
         <router-link tag="div" :to="item.path" class="tab_box">
-          <div>
-            <img :src="item.isChoose?item.activityImgUrl:item.imgUrl" alt="" class="icon" />
+          <div class="tab_box_inner">
+            <img
+              :src="item.isChoose ? item.activityImgUrl : item.imgUrl"
+              alt=""
+              class="icon"
+            />
 
             {{ item.tabName }}
           </div>
@@ -58,9 +62,7 @@ export default {
       immediate: true,
     },
   },
-  mounted() {
-    
-  },
+  mounted() {},
   components: {
     xxlbox,
   },
@@ -68,6 +70,28 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+@media screen and (max-width: 800px) {
+  .tab {
+    .bgm {
+    }
+    li {
+      height: 20px !important;
+      .tab_box {
+        height: 20px !important;
+        .icon {
+          height: 10px !important;
+          margin-right: 4px !important;
+        }
+      }
+      .red_box {
+        height: 5px !important;
+        width: 5px !important;
+        border: 1px solid #fff !important;
+        border-radius: 2px !important;
+      }
+    }
+  }
+}
 .tab {
   .bgm {
     background: #333 !important;
@@ -85,6 +109,11 @@ export default {
       align-items: center;
       justify-content: space-between;
       height: 50px;
+      .tab_box_inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
       .icon {
         height: 20px;
         margin-right: 5px;

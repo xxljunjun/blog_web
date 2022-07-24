@@ -91,45 +91,8 @@ export default {
 };
 </script>
 <style lang="scss">
-// 1000<x<1260
-@media screen and (min-width: 1000px) and (max-width: 1260px) {
-  // .bodyRight {
-  //   display: none !important;
-  // }
-}
+//平板手机改变布局
 @media screen and (max-width: 1260px) {
-  .bodyLeft {
-    .mine {
-      flex-flow: row !important ;
-      width: 100%;
-      height: 130px;
-      .avatar {
-        height: 110px;
-        width: 110px;
-        margin-left: 20px;
-        padding-right: 20px;
-        border-right: #ccc 4px dashed;
-      }
-      .line {
-        display: none;
-      }
-      // .connect{
-      //   display: none !important;
-      // }
-      .maessage {
-        margin-left: 20px;
-      }
-      .numbers {
-        display: none !important;
-      }
-    }
-  }
-  // #live2d-widget{
-  //   display: none !important;
-  // }
-  // .backTop{
-  //    display: none !important;
-  // }
   .body_box {
     flex-flow: column !important ;
   }
@@ -140,7 +103,7 @@ export default {
     padding: 0 !important;
   }
   .bodyRight {
-    position: relative;
+    position: relative !important;
     width: 100% !important;
     order: 1 !important;
     padding: 0 !important;
@@ -151,6 +114,35 @@ export default {
   }
   .top_box {
     width: 100% !important;
+  }
+}
+//本组件的响应式布局
+@media screen and (max-width: 800px) {
+
+  // 隐藏看板娘
+  #live2d-widget {
+    display: none !important;
+  }
+  // 隐藏回到顶部
+  .backTop {
+    display: none !important;
+  }
+  .app_box {
+    .body_box {
+      padding-top: 40px !important;
+      .box_middle {
+        .language {
+          .lang {
+            .lang_txt {
+            }
+            li {
+            }
+          }
+          .pen {
+          }
+        }
+      }
+    }
   }
 }
 //基础样式
@@ -172,7 +164,7 @@ export default {
     height: auto;
     .box_middle {
       padding: 0 32px;
-      max-width: 1440px;
+      // max-width: 1440px;
       width: 100%;
       .language {
         width: 100%;
